@@ -11753,7 +11753,7 @@ html {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: url(/eRequestPSC_Beta/content/img/mybg.png) #fff;
+    background: url(/content/img/mybg.png) #fff;
     /*background: url(/erequest_beta/content/img/mybg.png) #fff;*/
     /*background: url(/erequest/content/img/mybg.png) #fff;*/
     position: relative;
@@ -11763,7 +11763,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: url(/eRequestPSC_Beta/content/img/mybg.png) #fff;
+    background: url(/content/img/mybg.png) #fff;
     /*background: url(/erequest_beta/content/img/mybg.png) #fff;*/
     /*background: url(/erequest/content/img/mybg.png) #fff;*/
     direction: ltr;

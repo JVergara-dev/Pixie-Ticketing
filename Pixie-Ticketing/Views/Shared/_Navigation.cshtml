@@ -1,0 +1,42 @@
+﻿@using System.Web.Script.Serialization;
+@if (Request.IsAuthenticated)
+{
+    string SessionValue = Support.Helpers.GetSessionValue();
+    if (SessionValue == "error_trying_session")
+    {
+        Response.Redirect(Url.Action("Index", "Login"));
+    }
+
+    JavaScriptSerializer jsserializer = new JavaScriptSerializer();
+    HttpCookie authcookie = Request.Cookies[".PixieCookie"];
+    Support.Accounts.Account account = jsserializer.Deserialize<Support.Accounts.Account>(Support.Helpers.GetFormsAuthenticationCookie());
+
+    <li Class="dropdown"><a href="@Url.Action("Index", "RequestTable")" class="erequestlink"><span class="fa fa-home txt-color-red" style="font-size: 18px;"></span></a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="glyphicon glyphicon-user txt-color-red"></span>&nbsp;&nbsp;Account&nbsp;&nbsp;
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="@Url.Action("MainPage", "Password")" class="erequestlink"><span class="glyphicon glyphicon-lock txt-color-red"></span>&nbsp;&nbsp;Change Password</a></li>
+            <li class="divider"></li>
+
+            <li><a href="#" id="logout" onclick="Logout(this)"><span Class="glyphicon glyphicon-log-out txt-color-red"></span>&nbsp;&nbsp;Logout</a></li>
+        </ul>
+    </li>
+
+    <script>
+        function Logout(e) {
+            $.SmartMessageBox({
+                title: "<i class='fa fa-sign-out txt-color-red'></i>&nbsp;&nbsp;Logout",
+                content: "Unsaved changes will be discarded, are you sure you want to logout?",
+                buttons: '[Yes][No]'
+            }, function (ButtonPressed) {
+                if (ButtonPressed === "Yes") {
+                    window.location.href = "@Url.Action("Logout", "Login")"
+                }
+            });
+            e.preventDefault();
+        }
+    </script>
+}

@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: FontAwesome;
-    src: url(/eRequestPSC_Beta/content/fonts/fontawesome-webfont.eot?v=4.2.0);
-    src: url(/eRequestPSC_Beta/content/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format('embedded-opentype'),url(/eRequestPSC_Beta/content/fonts/fontawesome-webfont.woff?v=4.2.0) format('woff'),url(/eRequestPSC_Beta/content/fonts/fontawesome-webfont.ttf?v=4.2.0) format('truetype'),url(/eRequestPSC_Beta/content/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format('svg');
+    src: url(/content/fonts/fontawesome-webfont.eot?v=4.2.0);
+    src: url(/content/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format('embedded-opentype'),url(/content/fonts/fontawesome-webfont.woff?v=4.2.0) format('woff'),url(/content/fonts/fontawesome-webfont.ttf?v=4.2.0) format('truetype'),url(/content/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format('svg');
     /*src: url(/erequest_beta/content/fonts/fontawesome-webfont.eot?v=4.2.0);
     src: url(/erequest_beta/content/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format('embedded-opentype'),url(/erequest_beta/content/fonts/fontawesome-webfont.woff?v=4.2.0) format('woff'),url(/erequest_beta/content/fonts/fontawesome-webfont.ttf?v=4.2.0) format('truetype'),url(/erequest_beta/content/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format('svg');*/
     /*src: url(/erequest/content/fonts/fontawesome-webfont.eot?v=4.2.0);

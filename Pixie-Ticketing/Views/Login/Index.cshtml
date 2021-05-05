@@ -1,0 +1,62 @@
+﻿@model Pixie_Ticketing.Models.LoginModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background: none;
+    }
+
+    .jumbotron {
+        background: rgba(255,255,255,0.25);
+    }
+</style>
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-lg-offset-0">
+
+    </div>
+    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-lg-offset-0">
+        <div class="well no-padding">
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "smart-form client-form", lm=Model }))
+            {
+                @Html.AntiForgeryToken();
+                @Html.HiddenFor(m => m.ReturnUrl);
+
+                <header>Login Credentials</header>
+
+                if (ViewData.ModelState.IsValid == false)
+                {
+                    <div class="alert alert-danger alert-block">
+                        @Html.ValidationMessage("")
+                    </div>
+                }
+                <fieldset>
+                    <section>
+                        <label class="label">Username</label>
+                        <label class="input">
+                            <i class="icon-append fa fa-user"></i>
+                            @Html.TextBoxFor(m => m.Username, new { @maxlength = "16", @placeholder = "Username" })
+                            <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-red"></i>&nbsp;&nbsp;Please input Username.</b>
+                        </label>
+                    </section>
+                    <section>
+                        <Label Class="label">Password</Label>
+                        <Label Class="input">
+                            <i Class="icon-append fa fa-lock"></i>
+                            @Html.TextBoxFor(m => m.Password, new { @maxlength = "20", @placeholder = "Password" })
+                            <b Class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-red"></i>&nbsp;&nbsp;Please input Password.</b>
+                        </Label>
+                    </section>
+                </fieldset>
+
+                <footer>
+                    <Button type="submit" Class="btn btn btn-default"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</Button>
+                </footer>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -134,18 +134,119 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ajax\dashboard.html" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\demo.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\invoice.min.css" />
+    <Content Include="Content\css\lockscreen.min.css" />
+    <Content Include="Content\css\smartadmin-production-plugins.min.css" />
+    <Content Include="Content\css\smartadmin-production.min.css" />
+    <Content Include="Content\css\smartadmin-rtl.min.css" />
+    <Content Include="Content\css\smartadmin-skins.min.css" />
+    <Content Include="Content\css\your_style.css" />
+    <Content Include="Content\css\your_style.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\0001_big.png" />
+    <Content Include="Content\img\0002_big.png" />
+    <Content Include="Content\img\0003_big.png" />
+    <Content Include="Content\img\abc-logo-small.png" />
+    <Content Include="Content\img\ABC1.png" />
+    <Content Include="Content\img\ABCLABFORM_2.png" />
+    <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\alpha.png" />
+    <Content Include="Content\img\blank.gif" />
+    <Content Include="Content\img\clear.png" />
+    <Content Include="Content\img\ECMG3.png" />
+    <Content Include="Content\img\favicon\favicon.ico" />
+    <Content Include="Content\img\favicon_x.png" />
+    <Content Include="Content\img\formmnl.png" />
+    <Content Include="Content\img\formx.png" />
+    <Content Include="Content\img\frmaajkt.png" />
+    <Content Include="Content\img\frmjkt.png" />
+    <Content Include="Content\img\glass-image-copyright.txt" />
+    <Content Include="Content\img\glass.jpg" />
+    <Content Include="Content\img\HDI_Logo_small3-1-e1455154196454.png" />
+    <Content Include="Content\img\hue.png" />
+    <Content Include="Content\img\id.png" />
+    <Content Include="Content\img\jumbo1.png" />
+    <Content Include="Content\img\jumbo2.png" />
+    <Content Include="Content\img\jumbo3.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\logo-blacknwhite.png" />
+    <Content Include="Content\img\logo-blue.png" />
+    <Content Include="Content\img\logo-o.png" />
+    <Content Include="Content\img\logo-pale.png" />
+    <Content Include="Content\img\logo-white.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\mappin-default.png" />
+    <Content Include="Content\img\minus.png" />
+    <Content Include="Content\img\mybg.png" />
+    <Content Include="Content\img\ph.png" />
+    <Content Include="Content\img\pixie-logo.png" />
+    <Content Include="Content\img\plus.png" />
+    <Content Include="Content\img\QUEST1.png" />
+    <Content Include="Content\img\REQUEST_FORM_1.png" />
+    <Content Include="Content\img\ribbon.png" />
+    <Content Include="Content\img\sa-dark.png" />
+    <Content Include="Content\img\sa-default.png" />
+    <Content Include="Content\img\saturation.png" />
+    <Content Include="Content\img\select2-spinner.gif" />
+    <Content Include="Content\img\sort_asc.png" />
+    <Content Include="Content\img\sort_asc_disabled.png" />
+    <Content Include="Content\img\sort_both.png" />
+    <Content Include="Content\img\sort_desc.png" />
+    <Content Include="Content\img\sort_desc_disabled.png" />
+    <Content Include="Content\img\SUN2.png" />
+    <Content Include="Content\img\us.png" />
+    <Content Include="Content\img\vt-menu.png" />
+    <Content Include="Content\sound\bigbox.mp3" />
+    <Content Include="Content\sound\bigbox.ogg" />
+    <Content Include="Content\sound\doorbell.mp3" />
+    <Content Include="Content\sound\license.txt" />
+    <Content Include="Content\sound\messagebox.mp3" />
+    <Content Include="Content\sound\messagebox.ogg" />
+    <Content Include="Content\sound\smallbox.mp3" />
+    <Content Include="Content\sound\smallbox.ogg" />
+    <Content Include="Content\sound\voice_alert.mp3" />
+    <Content Include="Content\sound\voice_alert.ogg" />
+    <Content Include="Content\sound\voice_off.mp3" />
+    <Content Include="Content\sound\voice_off.ogg" />
+    <Content Include="Content\sound\voice_on.mp3" />
+    <Content Include="Content\sound\voice_on.ogg" />
+    <Content Include="Content\vid\small.mp4" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\ai.0.22.9-build00167.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\app.config.js" />
+    <Content Include="Scripts\app.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\demo.min.js" />
+    <Content Include="Scripts\DYMO.Label.Framework.2.0.2.js" />
+    <Content Include="Scripts\DYMO.Label.Framework.latest.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\libs\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\notification\SmartNotification.min.js" />
+    <Content Include="Scripts\smart-chat-ui\smart.chat.manager.min.js" />
+    <Content Include="Scripts\smart-chat-ui\smart.chat.ui.min.js" />
+    <Content Include="Scripts\smartwidgets\jarvis.widget.min.js" />
+    <Content Include="Scripts\speech\voicecommand.min.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -153,6 +254,23 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Scripts\libs\jquery-2.1.1.min.map" />
+    <Content Include="Content\css\your_style.less" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\pdf\ABN.pdf" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,8 +280,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Scripts\plugin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Support\Support.csproj">
+      <Project>{3f8fc897-e28c-40fa-b165-eb89a217684f}</Project>
+      <Name>Support</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
