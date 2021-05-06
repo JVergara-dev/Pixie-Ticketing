@@ -113,5 +113,17 @@ namespace Pixie_Ticketing.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+
+        public ActionResult Pseudoupdate()
+        {
+            if (Request.IsAuthenticated)
+            {
+                return Content("ok");
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
