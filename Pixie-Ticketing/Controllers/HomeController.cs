@@ -14,7 +14,7 @@ namespace Pixie_Ticketing.Views.Home
         // GET: Home
         [OutputCache(Duration = 0)]
         [Authorize]
-        public ActionResult Index(string key = "")
+        public ActionResult Index()
         {
             if (!Request.IsAuthenticated)
             {

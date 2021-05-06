@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.Mvc;
 using Support;
 using Pixie_Ticketing.Models;
+using System.Web.Script.Serialization;
 namespace Pixie_Ticketing.Controllers
 {
     public class LoginController : Controller
@@ -76,7 +78,7 @@ namespace Pixie_Ticketing.Controllers
             lm.Username = lm.Username.ToUpper().Trim();
 
             Accounts accnts = new Accounts();
-            Accounts.Account accnt = new Accounts.Account();
+            Accounts.Account accnt = accnts.SelectUserByUsername(lm.Username);
             
             if(accnt.Username == null)
             {
@@ -85,7 +87,31 @@ namespace Pixie_Ticketing.Controllers
                 return View(lm);
             }
 
-            return View();
+            string hashing = PRMS.GetMD5Hash(lm.Password);
+
+            if (PRMS.GetMD5Hash(lm.Password) != accnt.Password)
+            {
+                ModelState.AddModelError("", "Password is incorrect.");
+                return View(lm);
+            }
+            else
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                string data = serializer.Serialize(accnt);
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, lm.Username, DateTime.Now, DateTime.Now.AddHours(8), true, data, FormsAuthentication.FormsCookiePath);
+                string encriptedTicket = FormsAuthentication.Encrypt(ticket);
+                HttpCookie ticketCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encriptedTicket);
+                Accounts.Account x = serializer.Deserialize<Accounts.Account>(data);
+                Response.Cookies.Add(ticketCookie);
+
+                Parameters.UserID = accnt.ID;
+                Parameters.UserName = accnt.Name;
+                Parameters.UsedUsername = accnt.Username;
+                Parameters.Password = accnt.Password;
+                Parameters.Department = accnt.DepartmentID;
+                Parameters.Role = accnt.RoleID;
+                return RedirectToAction("Index", "Home");
+            }
         }
     }
 }

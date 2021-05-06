@@ -45,6 +45,7 @@
     <Compile Include="Accounts.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Parameters.cs" />
+    <Compile Include="PRMS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

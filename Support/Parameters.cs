@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Support
 {
-    class Parameters
+    public class Parameters
     {
-        public string PixieConnectionString;
-        public int UserID;
-        public string UserName;
-        public string Password;
-        public string Role;
-        public string Department;
+        public static string PixieConnectionString;
+        public static int UserID;
+        public static string UserName;
+        public static string UsedUsername;
+        public static string Password;
+        public static int Role;
+        public static int Department;
     }
 }
